@@ -1,5 +1,14 @@
-- name: ping the server
-  hosts: local
+# - name: ping the server
+#   hosts: local
+#   tasks:
+#   - name: ping the local server
+#     ansible.builtin.ping:
+---
+- name: Verify Ansible connectivity to localhost
+  hosts: localhost
+  connection: local
+  gather_facts: false  # Not necessary for a simple ping
   tasks:
-  - name: ping the local server
-    ansible.builtin.ping:
+    - name: Ping the control node
+      ansible.builtin.ping:
+
