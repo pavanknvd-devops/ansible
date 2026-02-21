@@ -1,0 +1,11 @@
+- name: Variables Demo
+  hosts: local
+  connection: local
+  vars_files:
+    course.yaml    
+  tasks:
+  - name: Variable tasks
+    vars:
+      COURSE: "Docker"
+    ansible.builtin.debug:
+        msg:  "Course is :{{ COURSE }} \n DURATIOn is :{{ DURATION}}"
