@@ -6,6 +6,5 @@
   tasks:
   - name: Variable tasks
     vars:
-      COURSE: "Docker"
     ansible.builtin.debug:
         msg:  "Course is :{{ COURSE }} \n DURATIOn is :{{ DURATION}}"
