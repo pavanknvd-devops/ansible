@@ -6,6 +6,6 @@
     DURATION: "140HRS"
     TRAINER:  "SHIVA"
   tasks:
-    - name: Variable tasks
-      ansible.builtin.debug:
-      msg:  "Course is :{{ COURSE }}"
+  - name: Variable tasks
+    ansible.builtin.debug:
+        msg:  "Course is :{{ COURSE }}"
