@@ -4,4 +4,4 @@
   tasks:
    - name: Print Course From Inventory
      ansible.builtin.debug:
-      msg:  "Course is: {{ COURSE}}"
+      msg:  "Course is: {{ COURSE | upper}}"
